@@ -7,7 +7,7 @@ class MoviesHomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: MoviesHomeViewBody(),
+      body: SafeArea(child: MoviesHomeViewBody()),
     );
   }
 }
