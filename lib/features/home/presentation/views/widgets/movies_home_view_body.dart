@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/features/home/presentation/views/widgets/movies_app_bar.dart';
 import 'package:movies_app/features/home/presentation/views/widgets/now_showing_movies_list.dart';
+import 'package:movies_app/features/home/presentation/views/widgets/popular_movies_list.dart';
 import 'package:movies_app/features/home/presentation/views/widgets/title_movies_section.dart';
 
 class MoviesHomeViewBody extends StatelessWidget {
@@ -23,6 +24,10 @@ class MoviesHomeViewBody extends StatelessWidget {
         TitleMoviesSection(
           title: 'Popular',
         ),
+        SizedBox(
+          height: 15,
+        ),
+        Expanded(child: PoPularMoviesList()),
       ],
     );
   }
