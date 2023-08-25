@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/features/home/presentation/views/widgets/movies_app_bar.dart';
+import 'package:movies_app/features/home/presentation/views/widgets/now_showing_movies_list.dart';
 import 'package:movies_app/features/home/presentation/views/widgets/title_movies_section.dart';
 
 class MoviesHomeViewBody extends StatelessWidget {
@@ -14,7 +15,9 @@ class MoviesHomeViewBody extends StatelessWidget {
         SizedBox(
           height: 20,
         ),
-        TitleMoviesSection()
+        TitleMoviesSection(),
+        SizedBox(height: 20,),
+        NowShowingMoviesList()
       ],
     );
   }
