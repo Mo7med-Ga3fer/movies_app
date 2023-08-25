@@ -10,7 +10,7 @@ class PopularMoviesListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 125,
+      height: MediaQuery.of(context).size.height * 0.15,
       child: Row(
         children: [
           AspectRatio(
