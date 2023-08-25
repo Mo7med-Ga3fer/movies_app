@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/features/home/presentation/views/movies_home_view.dart';
+import 'package:go_router/go_router.dart';
+import 'package:movies_app/core/utils/app_router.dart';
 import 'package:movies_app/features/splash/presenation/views/widgets/animated_splash_view_text.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -28,7 +29,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     Future.delayed(
       const Duration(milliseconds: 5000),
       (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const MoviesHomeView()));
+        GoRouter.of(context).push(AppRouter.kHomeView);
       }
     );}
 }
