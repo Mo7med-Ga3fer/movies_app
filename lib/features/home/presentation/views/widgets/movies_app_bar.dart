@@ -7,22 +7,29 @@ class MoviesAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        IconButton(
-          onPressed: (){},
-           icon: const FaIcon(FontAwesomeIcons.barsStaggered,),
-           ),
-        Text('FilmKu', style: GoogleFonts.merriweather(
-          fontSize: 25,
-          fontWeight: FontWeight.bold,
-        ),),
-        IconButton(
-          onPressed: (){},
-           icon: const FaIcon(FontAwesomeIcons.magnifyingGlass,),
-           ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          IconButton(
+            onPressed: (){},
+             icon: const FaIcon(FontAwesomeIcons.barsStaggered,
+             size: 20,
+             ),
+             ),
+          Text('FilmKu', style: GoogleFonts.merriweather(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),),
+          IconButton(
+            onPressed: (){},
+             icon: const FaIcon(FontAwesomeIcons.magnifyingGlass, 
+             size: 20,
+             ),
+             ),
+        ],
+      ),
     );
   }
 }

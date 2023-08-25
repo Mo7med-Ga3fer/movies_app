@@ -13,7 +13,7 @@ class AnimatedSplashViewText extends StatelessWidget {
                     FadeAnimatedText(
                       'FilmKu',
                       textStyle:  GoogleFonts.merriweather(
-                          backgroundColor: const Color(0xff800000),
+                          backgroundColor: const Color(0xffFF2E2E),
                           color: Colors.white,
                           fontSize: 35.0,
                           fontWeight: FontWeight.bold

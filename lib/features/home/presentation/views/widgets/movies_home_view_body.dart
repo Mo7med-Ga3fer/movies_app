@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movies_app/features/home/presentation/views/widgets/movies_app_bar.dart';
+import 'package:movies_app/features/home/presentation/views/widgets/title_movies_section.dart';
 
 class MoviesHomeViewBody extends StatelessWidget {
   const MoviesHomeViewBody({super.key});
@@ -7,8 +8,13 @@ class MoviesHomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         MoviesAppBar(),
+        SizedBox(
+          height: 20,
+        ),
+        TitleMoviesSection()
       ],
     );
   }
