@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TitleMoviesSection extends StatelessWidget {
-  const TitleMoviesSection({super.key});
+  const TitleMoviesSection({super.key, required this.title});
+  
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,7 @@ class TitleMoviesSection extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
          children: [
-          Text('Now Showing', style: GoogleFonts.merriweather(
+          Text(title, style: GoogleFonts.merriweather(
               fontSize: 20,
               fontWeight: FontWeight.bold,
             ),),
