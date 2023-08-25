@@ -25,6 +25,7 @@ class NowShowingItem extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(height: 7,),
             Text('Spiderman: No Way Home',
             style: GoogleFonts.mulish(
               fontSize: 18,

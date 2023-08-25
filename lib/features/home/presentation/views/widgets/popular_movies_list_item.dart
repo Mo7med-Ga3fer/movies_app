@@ -14,10 +14,10 @@ class PopularMoviesListItem extends StatelessWidget {
       child: Row(
         children: [
           AspectRatio(
-            aspectRatio: 2.5/4,
+            aspectRatio: 2.9/4,
             child: Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(6),
                 image: const DecorationImage(
                   image: NetworkImage('https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_FMjpg_UX1000_.jpg'),
                   fit: BoxFit.fill,
