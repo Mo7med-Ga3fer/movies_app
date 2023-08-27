@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TitleMoviesSection extends StatelessWidget {
-  const TitleMoviesSection({super.key, required this.title});
+  const TitleMoviesSection({super.key, required this.title, this.paddingValue = 20});
   
   final String title;
+  final double paddingValue;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: EdgeInsets.symmetric(horizontal: paddingValue),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
          children: [
