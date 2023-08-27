@@ -7,11 +7,10 @@ class MovieCastList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      scrollDirection: Axis.horizontal,
-      itemCount: 10,
-      itemBuilder: (context, index){
-        return const MovieCastListItem();
-      }
-      );
+        scrollDirection: Axis.horizontal,
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          return const MovieCastListItem();
+        });
   }
 }

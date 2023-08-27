@@ -19,7 +19,9 @@ class MoviesHomeViewBody extends StatelessWidget {
         TitleMoviesSection(
           title: 'Now Showing',
         ),
-        SizedBox(height: 20,),
+        SizedBox(
+          height: 20,
+        ),
         NowShowingMoviesList(),
         TitleMoviesSection(
           title: 'Popular',

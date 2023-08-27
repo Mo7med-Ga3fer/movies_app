@@ -11,7 +11,6 @@ class SplashViewBody extends StatefulWidget {
 }
 
 class _SplashViewBodyState extends State<SplashViewBody> {
-
   @override
   void initState() {
     super.initState();
@@ -20,16 +19,12 @@ class _SplashViewBodyState extends State<SplashViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-                child: AnimatedSplashViewText()
-              );
+    return const Center(child: AnimatedSplashViewText());
   }
 
-   void navigateToHome() {
-    Future.delayed(
-      const Duration(milliseconds: 4500),
-      (){
-        GoRouter.of(context).push(AppRouter.kHomeView);
-      }
-    );}
+  void navigateToHome() {
+    Future.delayed(const Duration(milliseconds: 4500), () {
+      GoRouter.of(context).push(AppRouter.kHomeView);
+    });
+  }
 }

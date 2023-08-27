@@ -13,13 +13,16 @@ class MovieDuration extends StatelessWidget {
           FontAwesomeIcons.clock,
           size: 14,
         ),
-        const SizedBox(width: 5,),
+        const SizedBox(
+          width: 5,
+        ),
         Text(
-              '2h 28m',
-              style: GoogleFonts.mulish(
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
-              ),),
+          '2h 28m',
+          style: GoogleFonts.mulish(
+            fontSize: 12,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ],
     );
   }

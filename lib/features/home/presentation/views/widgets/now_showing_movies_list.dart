@@ -9,12 +9,11 @@ class NowShowingMoviesList extends StatelessWidget {
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.4,
       child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: 10,
-        itemBuilder: (context, index){
-          return const NowShowingItem();
-        }
-        ),
+          scrollDirection: Axis.horizontal,
+          itemCount: 10,
+          itemBuilder: (context, index) {
+            return const NowShowingItem();
+          }),
     );
   }
 }

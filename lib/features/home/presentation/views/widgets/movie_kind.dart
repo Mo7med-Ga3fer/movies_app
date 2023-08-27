@@ -11,7 +11,9 @@ class MovieKind extends StatelessWidget {
         MovieKindItem(
           txt: 'ACTION',
         ),
-        SizedBox(width: 10,),
+        SizedBox(
+          width: 10,
+        ),
         MovieKindItem(
           txt: 'ADVANTURE',
         ),

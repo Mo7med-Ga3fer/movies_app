@@ -16,34 +16,54 @@ class CustomMovieDetails extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Spiderman: No Way Home', style: GoogleFonts.mulish(
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-          ),),
-          const SizedBox(height: 7,),
+          Text(
+            'Spiderman: No Way Home',
+            style: GoogleFonts.mulish(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(
+            height: 7,
+          ),
           const MovieRate(),
-          const SizedBox(height: 12,),
+          const SizedBox(
+            height: 12,
+          ),
           const MovieKind(),
-          const SizedBox(height: 12,),
+          const SizedBox(
+            height: 12,
+          ),
           const MovieTraits(),
-          const SizedBox(height: 24,),
-          Text('Description', style: GoogleFonts.merriweather(
-            fontSize: 20,
-            fontWeight: FontWeight.w900
-          ),),
-          const SizedBox(height: 10,),
-          Text("With Spider-Man's identity now revealed Peter asks Doctor Strange for help. When a spell goes wrong dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man." ,style: GoogleFonts.mulish(
-            fontSize: 15,
-            color: const Color(0xff9C9C9C),
-          ),),
-          const SizedBox(height: 30,),
+          const SizedBox(
+            height: 24,
+          ),
+          Text(
+            'Description',
+            style: GoogleFonts.merriweather(
+                fontSize: 20, fontWeight: FontWeight.w900),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Text(
+            "With Spider-Man's identity now revealed Peter asks Doctor Strange for help. When a spell goes wrong dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.",
+            style: GoogleFonts.mulish(
+              fontSize: 15,
+              color: const Color(0xff9C9C9C),
+            ),
+          ),
+          const SizedBox(
+            height: 30,
+          ),
           const TitleMoviesSection(
             title: 'Cast',
             paddingValue: 0,
-            ),
-          const SizedBox(height: 25,),
-          const Expanded(
-            child: MovieCastList()),
+          ),
+          const SizedBox(
+            height: 25,
+          ),
+          const Expanded(child: MovieCastList()),
         ],
       ),
     );

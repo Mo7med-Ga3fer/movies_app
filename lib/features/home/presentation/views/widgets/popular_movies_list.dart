@@ -7,13 +7,12 @@ class PoPularMoviesList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 10,
-      itemBuilder: (context, index){
-        return const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 9),
-          child: PopularMoviesListItem(),
-        );
-      }
-      );
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          return const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 9),
+            child: PopularMoviesListItem(),
+          );
+        });
   }
 }

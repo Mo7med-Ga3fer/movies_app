@@ -13,21 +13,26 @@ class MoviesAppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
-            onPressed: (){},
-             icon: const FaIcon(FontAwesomeIcons.barsStaggered,
-             size: 20,
-             ),
-             ),
-          Text('FilmKu', style: GoogleFonts.merriweather(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),),
+            onPressed: () {},
+            icon: const FaIcon(
+              FontAwesomeIcons.barsStaggered,
+              size: 20,
+            ),
+          ),
+          Text(
+            'FilmKu',
+            style: GoogleFonts.merriweather(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
           IconButton(
-            onPressed: (){},
-             icon: const FaIcon(FontAwesomeIcons.magnifyingGlass, 
-             size: 20,
-             ),
-             ),
+            onPressed: () {},
+            icon: const FaIcon(
+              FontAwesomeIcons.magnifyingGlass,
+              size: 20,
+            ),
+          ),
         ],
       ),
     );

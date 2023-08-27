@@ -8,14 +8,16 @@ class MovieRate extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Icon(Icons.star_rate_rounded,
-        color: Color(0xffFFD700),
-        size: 22,
+        const Icon(
+          Icons.star_rate_rounded,
+          color: Color(0xffFFD700),
+          size: 22,
         ),
-        Text('9.1/10 IMDb', style: GoogleFonts.mulish(
-          fontSize: 15,
-          color: const Color(0xff9C9C9C)
-        ),)
+        Text(
+          '9.1/10 IMDb',
+          style:
+              GoogleFonts.mulish(fontSize: 15, color: const Color(0xff9C9C9C)),
+        )
       ],
     );
   }

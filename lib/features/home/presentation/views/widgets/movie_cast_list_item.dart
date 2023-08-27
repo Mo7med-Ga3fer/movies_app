@@ -13,23 +13,29 @@ class MovieCastListItem extends StatelessWidget {
           SizedBox(
             height: 100,
             child: AspectRatio(
-              aspectRatio: .7/.7,
+              aspectRatio: .7 / .7,
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                   image: const DecorationImage(
-                    image: NetworkImage('https://cdn.arageek.com/magazine/2020/02/66.jpg'),
+                    image: NetworkImage(
+                        'https://cdn.arageek.com/magazine/2020/02/66.jpg'),
                     fit: BoxFit.cover,
-                    ),
+                  ),
                 ),
               ),
             ),
           ),
-          const SizedBox(height: 7,),
-          Text('SpiderMan', style: GoogleFonts.mulish(
-            fontSize: 15,
-            fontWeight: FontWeight.bold,
-          ),)
+          const SizedBox(
+            height: 7,
+          ),
+          Text(
+            'SpiderMan',
+            style: GoogleFonts.mulish(
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
+            ),
+          )
         ],
       ),
     );
