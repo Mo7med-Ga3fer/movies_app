@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:movies_app/core/utils/app_router.dart';
+import 'package:movies_app/features/home/data/models/movie_model.dart';
+import 'package:movies_app/features/home/presentation/views/movie_details_view.dart';
 import 'package:movies_app/features/home/presentation/views/widgets/movie_duration.dart';
 import 'package:movies_app/features/home/presentation/views/widgets/movie_kind.dart';
 import 'package:movies_app/features/home/presentation/views/widgets/movie_rate.dart';
 
 class PopularMoviesListItem extends StatelessWidget {
-  const PopularMoviesListItem({super.key});
-
+  const PopularMoviesListItem({super.key, required this.movie});
+  final MovieModel movie;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => GoRouter.of(context).push(AppRouter.kMovieDetailsView),
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>MovieDetailsView(movie: movie)));
+      },
       child: SizedBox(
         height: MediaQuery.of(context).size.height * 0.15,
         child: Row(children: [
@@ -21,9 +23,9 @@ class PopularMoviesListItem extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(6),
-                image: const DecorationImage(
+                image: DecorationImage(
                   image: NetworkImage(
-                      'https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_FMjpg_UX1000_.jpg'),
+                      'https://image.tmdb.org/t/p/w500${movie.posterPath}'),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -36,7 +38,7 @@ class PopularMoviesListItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Spiderman: No Way Home',
+                movie.title!,
                 style: GoogleFonts.mulish(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -45,7 +47,7 @@ class PopularMoviesListItem extends StatelessWidget {
               const SizedBox(
                 height: 9,
               ),
-              const MovieRate(vote: '10',),
+              MovieRate(vote: movie.voteAverage.toString(),),
               const SizedBox(
                 height: 9,
               ),

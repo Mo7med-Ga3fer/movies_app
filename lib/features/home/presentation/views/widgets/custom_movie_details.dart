@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:movies_app/features/home/data/models/movie_model.dart';
 import 'package:movies_app/features/home/presentation/views/widgets/movie_cast_list.dart';
 import 'package:movies_app/features/home/presentation/views/widgets/movie_kind.dart';
 import 'package:movies_app/features/home/presentation/views/widgets/movie_rate.dart';
@@ -7,8 +8,8 @@ import 'package:movies_app/features/home/presentation/views/widgets/movie_traits
 import 'package:movies_app/features/home/presentation/views/widgets/title_movies_section.dart';
 
 class CustomMovieDetails extends StatelessWidget {
-  const CustomMovieDetails({super.key});
-
+  const CustomMovieDetails({super.key, required this.movie});
+  final MovieModel movie;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -17,7 +18,7 @@ class CustomMovieDetails extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Spiderman: No Way Home',
+            movie.title!,
             style: GoogleFonts.mulish(
               fontSize: 22,
               fontWeight: FontWeight.bold,
@@ -26,7 +27,7 @@ class CustomMovieDetails extends StatelessWidget {
           const SizedBox(
             height: 7,
           ),
-          const MovieRate(),
+          MovieRate(vote: movie.voteAverage.toString(),),
           const SizedBox(
             height: 12,
           ),
@@ -47,7 +48,7 @@ class CustomMovieDetails extends StatelessWidget {
             height: 10,
           ),
           Text(
-            "With Spider-Man's identity now revealed Peter asks Doctor Strange for help. When a spell goes wrong dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.",
+            movie.overview!,
             style: GoogleFonts.mulish(
               fontSize: 15,
               color: const Color(0xff9C9C9C),

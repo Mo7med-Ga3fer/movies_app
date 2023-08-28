@@ -5,7 +5,6 @@ import '../../features/splash/presenation/views/splash_view.dart';
 
 abstract class AppRouter {
   static const kHomeView = '/homeView';
-  static const kMovieDetailsView = '/movieDetailsView';
 
   static final router = GoRouter(
     routes: [
@@ -16,10 +15,6 @@ abstract class AppRouter {
       GoRoute(
         path: kHomeView,
         builder: (context, state) => const MoviesHomeView(),
-      ),
-      GoRoute(
-        path: kMovieDetailsView,
-        builder: (context, state) => const MovieDetailsView(),
       ),
     ],
   );

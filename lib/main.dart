@@ -21,7 +21,7 @@ class MoviesApp extends StatelessWidget {
           create: (context) => GetMoviesCubit(HomeRepoImpl())..fetchGetMovies(),
         ),
         BlocProvider(
-          create: (context) => GetPopularMoviesCubit(HomeRepoImpl()),
+          create: (context) => GetPopularMoviesCubit(HomeRepoImpl())..fetchGetPopularMovies(),
         ),
       ],
       child: MaterialApp.router(

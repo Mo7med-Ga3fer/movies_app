@@ -1,8 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:movies_app/core/utils/app_router.dart';
+import 'package:movies_app/features/home/presentation/views/movie_details_view.dart';
 import 'package:movies_app/features/home/presentation/views/widgets/movie_rate.dart';
 import '../../../data/models/movie_model.dart';
 
@@ -12,7 +11,9 @@ class NowShowingItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => GoRouter.of(context).push(AppRouter.kMovieDetailsView),
+      onTap: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>MovieDetailsView(movie: movie)));
+      },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 9),
         child: AspectRatio(
