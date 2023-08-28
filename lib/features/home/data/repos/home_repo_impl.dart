@@ -27,9 +27,21 @@ class HomeRepoImpl implements HomeRepo
   }
 
   @override
-  Future<Either<Failure, List<MovieModel>>> fetchPopularMovies() {
-    // TODO: implement fetchPopularMovies
-    throw UnimplementedError();
+  Future<Either<Failure, List<MovieModel>>> fetchPopularMovies() async{
+    try {
+  var data = await apoService.get(endPoint:'movie/top_rated?api_key=7f46651666f1ca68e4cf0cb150551f07');
+  List<MovieModel> movies = [];
+  for(var result in data['results']){
+    movies.add(MovieModel.fromJson(result));
+  }
+  return right(movies);
+} catch (e) {
+  if(e is DioError){
+    return left(ServerFailure.fromDiorError(e));
+  }else{
+    return left(ServerFailure(e.toString()));
+  }
+}
   }
 
 }
