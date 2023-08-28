@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies_app/core/widgets/custom_error_widget.dart';
 import 'package:movies_app/core/widgets/custom_loading_indicator.dart';
-import 'package:movies_app/features/home/presentation/view_model/get_movies_cubit/get_movies_cubit.dart';
 import 'package:movies_app/features/home/presentation/view_model/get_popular_movies_cubit/get_popular_movies_cubit.dart';
 import 'package:movies_app/features/home/presentation/views/widgets/popular_movies_list_item.dart';
 

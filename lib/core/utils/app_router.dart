@@ -1,5 +1,4 @@
 import 'package:go_router/go_router.dart';
-import 'package:movies_app/features/home/presentation/views/movie_details_view.dart';
 import 'package:movies_app/features/home/presentation/views/movies_home_view.dart';
 import '../../features/splash/presenation/views/splash_view.dart';
 
