@@ -18,7 +18,7 @@ class MoviesApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => GetMoviesCubit(HomeRepoImpl()),
+          create: (context) => GetMoviesCubit(HomeRepoImpl())..fetchGetMovies(),
         ),
         BlocProvider(
           create: (context) => GetPopularMoviesCubit(HomeRepoImpl()),

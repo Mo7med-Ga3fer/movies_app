@@ -45,7 +45,7 @@ class PopularMoviesListItem extends StatelessWidget {
               const SizedBox(
                 height: 9,
               ),
-              const MovieRate(),
+              const MovieRate(vote: '10',),
               const SizedBox(
                 height: 9,
               ),
